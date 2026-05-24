@@ -1,0 +1,103 @@
+---
+slug: how-to-write
+title: How to Write Articles on This Blog
+excerpt: A complete guide to writing X-style premium articles using MDX, with cover images, code blocks, embedded YouTube, figures, and more.
+date: 2026-05-23
+author: msaad
+tags: [Guide, Writing]
+cover: https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1600&q=80
+---
+
+This blog uses **MDX** — write in Markdown and drop in React components when you want rich media. Here's everything you can do.
+
+## 1. Create a new post
+
+Add a file to `content/posts/your-slug.mdx`. The file must start with frontmatter:
+
+```md
+---
+slug: your-slug
+title: Your Article Title
+excerpt: One-line summary that shows on the home page and social previews.
+date: 2026-05-24
+author: msaad
+tags: [AI, ChemE]
+cover: https://example.com/banner.jpg
+---
+```
+
+The `slug` becomes the URL: `blog.saadengineer.works/your-slug`.
+
+## 2. Headings and text
+
+Use Markdown for everything basic.
+
+### Subheading
+Regular paragraphs just work. **Bold**, *italic*, [links](https://saadengineer.works), and `inline code` are all supported.
+
+> Pull quotes look great with the `>` blockquote syntax. Use them to highlight key takeaways.
+
+- Bullet lists work
+- Across multiple lines
+- With nested formatting
+
+1. Numbered lists too
+2. Just like that
+
+## 3. Code blocks
+
+Triple-backticks with a language give you syntax highlighting:
+
+```python
+def fine_tune(model, dataset):
+    for epoch in range(epochs):
+        loss = model.train(dataset)
+        print(f"Epoch {epoch}: loss={loss:.4f}")
+    return model
+```
+
+```javascript
+const greet = (name) => `Hello, ${name}!`;
+console.log(greet("Engineer Saad"));
+```
+
+## 4. Embed images
+
+Use the `<Figure />` component for nice captions:
+
+<Figure
+  src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1400&q=80"
+  alt="Lab beakers"
+  caption="A real ChemE lab — your articles can have captioned images like this."
+/>
+
+## 5. Embed YouTube videos
+
+Use the `<YouTube />` component with the video ID:
+
+<YouTube id="dQw4w9WgXcQ" title="Sample video" />
+
+## 6. Publish
+
+1. Save the file
+2. Commit and push to GitHub
+3. Vercel auto-deploys in ~30 seconds
+4. Your article is live at `blog.saadengineer.works/your-slug`
+
+## 7. Authors
+
+Add yourself in `content/authors/your-id.json`:
+
+```json
+{
+  "id": "your-id",
+  "name": "Your Name",
+  "bio": "Short bio.",
+  "avatar": "https://example.com/avatar.jpg",
+  "social": { "x": "https://x.com/...", "website": "https://..." }
+}
+```
+
+Then reference your `author: your-id` in any post's frontmatter. Multiple authors can publish here.
+
+That's it — write away.

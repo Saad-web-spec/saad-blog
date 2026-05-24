@@ -1,7 +1,10 @@
-"use client";
 import React from "react";
+import YouTube from "./YouTube";
+import Figure from "./Figure";
 
 export const MDXComponents = {
+  YouTube,
+  Figure,
   h1: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4" {...props} />
   ),
