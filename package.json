@@ -10,7 +10,12 @@
   },
   "dependencies": {
     "@giscus/react": "^3.1.0",
+    "@supabase/supabase-js": "^2.106.1",
     "@tailwindcss/typography": "^0.5.19",
+    "@tiptap/extension-image": "^3.23.6",
+    "@tiptap/pm": "^3.23.6",
+    "@tiptap/react": "^3.23.6",
+    "@tiptap/starter-kit": "^3.23.6",
     "@vercel/analytics": "^2.0.1",
     "@vercel/og": "^0.11.1",
     "date-fns": "^4.3.0",

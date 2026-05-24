@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
+import AuthButton from "@/components/AuthButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -54,9 +55,10 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-neutral-900/50 border-b border-neutral-800">
           <div className="max-w-4xl mx-auto px-5 h-14 flex items-center justify-between">
             <Link href="/" className="font-semibold tracking-wider">M.Saad • Blog</Link>
-            <nav className="text-sm space-x-4">
+            <nav className="text-sm flex items-center space-x-6">
               <Link className="hover:text-blue-400" href="/">Articles</Link>
               <a className="hover:text-blue-400" href="https://saadengineer.works">Portfolio</a>
+              <AuthButton />
             </nav>
           </div>
         </header>
