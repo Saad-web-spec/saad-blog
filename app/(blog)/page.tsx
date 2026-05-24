@@ -3,7 +3,7 @@ import { getAllPosts } from "@/lib/posts";
 
 export const revalidate = 60;
 
-export default function Home() {
+export default function BlogHome() {
   const posts = getAllPosts();
   return (
     <main className="min-h-screen bg-[#030303] text-neutral-100">

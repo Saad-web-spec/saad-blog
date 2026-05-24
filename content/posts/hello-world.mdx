@@ -1,0 +1,32 @@
+---
+slug: hello-world
+title: How I Fine-Tuned an AI Model for Chemical Engineering
+excerpt: A practical walkthrough of adapting a general LLM to ChemE terminology and tasks using open datasets.
+date: 2026-05-24
+author: msaad
+tags: [AI, ChemE]
+cover: /cover-default.jpg
+---
+
+Welcome to the new blog. This post demonstrates the MDX setup with headings, code, and quotes.
+
+## Why fine-tune for ChemE?
+
+General LLMs don't know domain-specific abbreviations and symbols well enough. Fine-tuning bridges that gap.
+
+```python
+# example: simple regressor baseline
+import numpy as np
+from sklearn.linear_model import LinearRegression
+X = np.array([[1, 3], [2, 5], [3, 9]])
+y = np.array([2.1, 3.6, 7.3])
+model = LinearRegression().fit(X, y)
+print(model.coef_)
+```
+
+> Fine-tuning is not magic — data quality and evaluation matter most.
+
+### Next up
+- Dataset curation
+- Tokenization strategy
+- Evaluation checklist
