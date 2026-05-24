@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -60,6 +61,7 @@ export default function RootLayout({
           </div>
         </header>
         {children}
+        <Analytics />
         <footer className="border-t border-neutral-800 mt-16">
           <div className="max-w-4xl mx-auto px-5 py-10 text-sm text-neutral-400">
             © {new Date().getFullYear()} M.Saad — ChemE × AI. <a className="text-blue-400 hover:text-blue-300" href="https://saadengineer.works">Portfolio</a>
